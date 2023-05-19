@@ -17,6 +17,9 @@ var firstValue = '0';
 var secondValue = '0';
 var operation = '';
 
+
+function 
+
 const add = document.createElement('button');
 add.textContent = '+';
 add.addEventListener('click', () => {
