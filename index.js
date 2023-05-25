@@ -86,7 +86,7 @@ for (let i = 9; i >= 0; i--) {
 }
 
 
-// Este elemento crea una caja de texto para el punto decimal.
+// Este elemento crea unun botón para el punto decimal.
 const decimal = document.createElement('button');
 decimal.textContent = '.';
 decimal.addEventListener('click', () => {
@@ -110,7 +110,7 @@ equal.addEventListener('click', () => {
 
 // Este elemento crea un botón para cambiar entre el modo claro y oscuro.
 const modeButton = document.createElement('button');
-modeButton.textContent = 'Modo Claro';
+modeButton.textContent = 'Modo Oscuro';
 modeButton.setAttribute('data-mode', 'dark');
 modeButton.addEventListener('click', () => {
   const body = document.body;
@@ -127,6 +127,11 @@ modeButton.addEventListener('click', () => {
 // elementoObjetivo.insertAdjacentElement(posición, elemento);
 
 
+// Este elemento agrega el elemento de visualización, el elemento de operadores y el elemento de números al elemento de contenedor.
+container.appendChild(display);
+container.appendChild(operators);
+container.appendChild(numbers);
+
 // Este elemento agrega los botones decimal y clear al elemento numbers.
 numbers.appendChild(decimal);
 numbers.appendChild(clear);
@@ -134,10 +139,6 @@ numbers.appendChild(clear);
 // Este elemento agrega el botón igual al elemento numbers.
 numbers.appendChild(equal);
 
-// Este elemento agrega el elemento de visualización, el elemento de operadores y el elemento de números al elemento de contenedor.
-container.appendChild(display);
-container.appendChild(operators);
-container.appendChild(numbers);
 
 // Este elemento agrega el botón de modo al cuerpo del documento.
 container.appendChild(modeButton);
